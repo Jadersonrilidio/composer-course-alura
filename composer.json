@@ -1,0 +1,21 @@
+{
+    "name": "jay/alura-courses",
+    "description": "alura project",
+    "type": "library",
+    "authors": [
+        {
+            "name": "jaderson",
+            "email": "jadersonrilidio@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Jay\\AluraCourses\\": "src/"
+        }
+    },
+    "require": {
+        "symfony/dom-crawler": "^5.4",
+        "guzzlehttp/guzzle": "^7.5",
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
