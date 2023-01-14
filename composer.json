@@ -2,7 +2,7 @@
     "name": "jayrods/alura-courses",
     "description": "alura project",
     "type": "library",
-    "license": "GPL-3",
+    "license": "MIT",
     "authors": [
         {
             "name": "jaderson",
