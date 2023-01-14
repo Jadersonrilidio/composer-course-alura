@@ -54,5 +54,8 @@
         "cs": "run codesniffer test for the folder src/.",
         "phan": "search for errors or inconsistencies on the php files inside folder src/.",
         "check": "run code verification. PHAN, PHPCBF, PHPCS e PHPUNIT"
-    }
+    },
+    "bin": [
+        "aluracourses"
+    ]
 }
