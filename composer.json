@@ -56,6 +56,7 @@
         "check": "run code verification. PHAN, PHPCBF, PHPCS e PHPUNIT"
     },
     "bin": [
+        "aluracourses",
         "aluracourses.php"
     ]
 }
