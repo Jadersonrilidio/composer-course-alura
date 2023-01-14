@@ -1,5 +1,5 @@
 {
-    "name": "jay/alura-courses",
+    "name": "jayrods/alura-courses",
     "description": "alura project",
     "type": "library",
     "authors": [
@@ -9,13 +9,49 @@
         }
     ],
     "autoload": {
+        "classmap": [
+            "./TestClass.php"
+        ],
+        "files": [
+            "./functions.php"
+        ],
         "psr-4": {
-            "Jay\\AluraCourses\\": "src/"
+            "Jayrods\\AluraCourses\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jayrods\\AluraCourses\\Tests\\": "tests/"
         }
     },
     "require": {
         "symfony/dom-crawler": "^5.4",
         "guzzlehttp/guzzle": "^7.5",
-        "vlucas/phpdotenv": "^5.5"
+        "vlucas/phpdotenv": "^5.5",
+        "symfony/css-selector": "^5.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.7",
+        "phan/phan": "^5.4"
+    },
+    "scripts": {
+        "test": "phpunit tests/TestAluraCoursesSearch.php",
+        "cbf": "phpcbf src/",
+        "cs": "phpcs --standard=PSR12 src/",
+        "phan": "phan --allow-polyfill-parser",
+        "check": [
+            "@phan",
+            "@cbf",
+            "@cs",
+            "@test"
+        ]
+    },
+    "scripts-descriptions": {
+        "test": "run PHPUnit test for TestAluraCoursesSearch.",
+        "cbf": "fix the PSR-12 divergences automaticaly if possible.",
+        "cs": "run codesniffer test for the folder src/.",
+        "phan": "search for errors or inconsistencies on the php files inside folder src/.",
+        "check": "run code verification. PHAN, PHPCBF, PHPCS e PHPUNIT"
     }
 }
